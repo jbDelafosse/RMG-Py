@@ -1209,8 +1209,8 @@ class KineticsFamily(Database):
             return None
         except ActionError:
             logging.error(
-                'Could not generate product structures for reaction family {0} in {1} direction'.format(self.label,
-                'forward' if forward else 'reverse'))
+                'Could not generate product structures for reaction family {0} in {1} direction'.format(
+                    self.label,'forward' if forward else 'reverse'))
             logging.info('Reactant structure\s:')
             for struct in reactantStructures:
                 print("{0}.\n{1}\n\n".format(struct, struct.toAdjacencyList()))
